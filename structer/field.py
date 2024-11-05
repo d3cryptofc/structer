@@ -1,6 +1,6 @@
 import re
 
-from .fieldtype import FieldTypeABC
+from .fieldtypes.base import FieldTypeABC
 
 
 class Field:

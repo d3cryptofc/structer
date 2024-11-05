@@ -1,6 +1,6 @@
 import pytest
 
-from structer.fieldtype import FieldType
+from structer.fieldtypes.base import FieldType
 
 
 def test_non_integer_size():
