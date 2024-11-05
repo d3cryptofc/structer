@@ -6,6 +6,9 @@ authors = ["Lelzin λ <d3cryptofc@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
+[tool.poetry.urls]
+Repository = "https://github.com/d3cryptofc/structer"
+
 [tool.poetry.dependencies]
 python = "^3.12"
 
