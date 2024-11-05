@@ -17,6 +17,13 @@ taskipy = "^1.14.0"
 ruff = "^0.7.2"
 pytest-cov = "^6.0.0"
 
+[tool.taskipy.tasks]
+test = "pytest -v"
+lint_mypy = "mypy structer"
+lint_ruff = "ruff check structer --diff && ruff format --diff"
+lint = "task lint_mypy && task lint_ruff"
+format = "ruff format && ruff check --fix"
+
 [tool.pytest.ini_options]
 addopts = "--cov=structer --cov-report=html --cov-report=term --show-capture=stdout -x"
 
