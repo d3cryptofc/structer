@@ -10,6 +10,8 @@
   <a href="https://github.com/d3cryptofc/structer/LICENSE"><img src="https://img.shields.io/badge/MIT-282C34?style=flat-square&label=License&labelColor=1D1D1D"></a>
 </p>
 
+
+### 💬 Frequently Asked Questions (FAQ)
 #### 1. What are structs?
 
 If you've never programmed in C, you might initially think that a struct is similar to a [dataclass](https://docs.python.org/3/library/dataclasses.html), but unlike a dataclass, structs map fields in memory, so that you have all the data glued together but delimited by their sizes.
