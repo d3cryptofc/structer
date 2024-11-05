@@ -22,6 +22,79 @@ Installation from GitHub:
 pip3 install git+https://github.com/d3cryptofc/structer.git
 ```
 
+### 🏃‍♀️ Getting Started
+
+I assure you it's easier than it looks.
+
+#### 1. Creating your first struct model
+
+Create your struct model using `structer.structfy(name, fields)`:
+
+```python3
+from structer import structfy, Char, Str, Field
+
+Person = structfy('Person', [
+  Field('name', Str(15)),
+  Field('gender', Char())
+])
+```
+
+Notes:
+
+- `structer.Str` is a short nickname for `structer.String`.
+- `structer.Char` is like `structer.String(1)`, but **specialized** for this.
+
+#### 2. Instance generation and data storage
+
+You can create an instance by passing the values ​​as an argument:
+
+```python
+>>> p = Person(name='John', gender='M')
+>>> p
+Person(name(15)='John', gender(1)='M') -> 16
+```
+
+Or, perhaps you want to make the modifications individually with the already created instance:
+
+```python
+>>> p = Person()
+>>> p
+Person(name(15)='', gender(1)='') -> 16
+>>> p.name = 'John'
+>>> p.gender = 'M'
+>>> p
+Person(name(15)='John', gender(1)='M') -> 16
+```
+
+#### 3. Representation and size
+
+You may have noticed that the object representation shows the size of each field and the total size of all fields.
+
+To find out the total size of your instance, use the `len` function:
+
+```python
+>>> len(p)
+16
+```
+
+Maybe you want to know the total size of the struct model without having to create an instance, access the `__struct_size__` attribute (size given in bytes):
+
+```python
+>>> Person.__struct_size__
+16
+```
+
+#### 4. Getting the serialized data
+
+Just access the `__struct_binary__` attribute:
+
+```python
+>>> p.__struct_binary__
+b'John\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00M'
+```
+
+Ready! Now you do whatever you want with it.
+
 ### 💬 Frequently Asked Questions (FAQ)
 #### 1. What are structs?
 
