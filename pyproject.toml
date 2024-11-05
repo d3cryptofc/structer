@@ -9,6 +9,14 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-sugar = "^1.0.0"
+mypy = "^1.13.0"
+taskipy = "^1.14.0"
+ruff = "^0.7.2"
+pytest-cov = "^6.0.0"
+
 
 [build-system]
 requires = ["poetry-core"]
