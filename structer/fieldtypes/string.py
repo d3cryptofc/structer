@@ -4,7 +4,7 @@ from .. import errors
 from .base import FieldType, FieldTypeABC
 
 
-class String(FieldTypeABC, FieldType):
+class String(FieldType, FieldTypeABC):
     def __init__(self, size: int):
         super().__init__(size)
         self._size = size
