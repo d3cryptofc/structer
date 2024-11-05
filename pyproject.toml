@@ -10,7 +10,7 @@ readme = "README.md"
 Repository = "https://github.com/d3cryptofc/structer"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.9"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
