@@ -1,5 +1,5 @@
 from types import MappingProxyType
-from typing import ClassVar, NoReturn, Sequence
+from typing import ClassVar, Mapping, NoReturn, Sequence, Tuple
 
 from . import errors
 from .field import Field
@@ -7,14 +7,12 @@ from .field import Field
 
 class Struct:
     __fields__: ClassVar[Sequence[Field]]
-    __struct_fields__: ClassVar[MappingProxyType[str, Field]]
+    __struct_fields__: ClassVar[Mapping[str, Field]]
     __struct_size__: ClassVar[int]
     __struct_binary__: bytes
-    __struct_offsets__: MappingProxyType[str, tuple[int, int]]
+    __struct_offsets__: Mapping[str, Tuple[int, int]]
 
-    def __init_subclass__(cls, **kwargs):
-        super().__init_subclass__(**kwargs)
-
+    def __init_subclass__(cls) -> None:
         if hasattr(cls, '__fields__'):
             fields = cls.__fields__[:]
         else:
@@ -28,6 +26,7 @@ class Struct:
         cls.__struct_size__ = 0
         for field in fields:
             if not issubclass(type(field), Field):
+                print(field)
                 raise errors.InvalidFieldTypeError(field)
 
             if hasattr(cls, field.name):
@@ -42,9 +41,8 @@ class Struct:
         del cls.__fields__
         cls.__struct_fields__ = MappingProxyType(newfields)
         cls.__module__ = cls.__module__
-        return cls
 
-    def __init__(self, **kwargs):
+    def __init__(self, **kwargs: str) -> None:
         if not hasattr(self, '__struct_fields__'):
             raise errors.EmptyStructFieldsError
 
@@ -54,6 +52,8 @@ class Struct:
 
         start_range = 0
         setattr(self, '__struct_offsets__', {})
+
+        struct_offsets = {}
 
         for field in self.__struct_fields__.values():
             setattr(
@@ -68,9 +68,12 @@ class Struct:
             else:
                 field_value = field.type.decode(b'\0')
 
-            self.__struct_offsets__[field.name] = (
+            struct_offsets[field.name] = (
                 start_range,
                 start_range + field.type.size,
+            )
+            setattr(
+                self, '__struct_offsets__', MappingProxyType(struct_offsets)
             )
             self.__setattr__(field.name, field_value)
             setattr(
@@ -85,10 +88,10 @@ class Struct:
             MappingProxyType(self.__struct_offsets__),
         )
 
-    def __len__(self):
+    def __len__(self) -> int:
         return self.__struct_size__
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         repr_parameters = ', '.join(
             '{}({})={!r}'.format(
                 field.name, field.type._size, getattr(self, field.name)

@@ -7,7 +7,7 @@ from .fieldtypes.string import Str, String  # noqa: F401
 from .struct import Struct  # noqa: F401
 
 
-def structfy(name: str, fields: Sequence[Field]):
+def structfy(name: str, fields: Sequence[Field]) -> type[Struct]:
     if not isinstance(name, str):
         raise TypeError('`name` parameter must be a string')
 

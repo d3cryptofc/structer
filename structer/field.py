@@ -4,7 +4,7 @@ from .fieldtypes.base import FieldTypeABC
 
 
 class Field:
-    def __init__(self, field_name: str, field_type: FieldTypeABC):
+    def __init__(self, field_name: str, field_type: FieldTypeABC) -> None:
         if not isinstance(field_name, str):
             raise TypeError('`field_name` parameter must be a string')
         if field_name.startswith('_'):
@@ -25,12 +25,12 @@ class Field:
         self._type = field_type
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self._name
 
     @property
-    def type(self):
+    def type(self) -> FieldTypeABC:
         return self._type
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return 'Field({!r}, {!r})'.format(self._name, self._type)

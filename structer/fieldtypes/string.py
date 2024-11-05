@@ -5,7 +5,7 @@ from .base import FieldType, FieldTypeABC
 
 
 class String(FieldType, FieldTypeABC):
-    def __init__(self, size: int):
+    def __init__(self, size: int) -> None:
         super().__init__(size)
         self._size = size
 
@@ -31,7 +31,7 @@ class String(FieldType, FieldTypeABC):
         if len(value) > self._size:
             raise errors.str_value_oversized_error(self)
 
-    def decode(self, value: Union[bytes, bytearray], **kwargs) -> str:
+    def decode(self, value: Union[bytes, bytearray], **kwargs: bool) -> str:
         self._validate_decode(value)
 
         string = ''
