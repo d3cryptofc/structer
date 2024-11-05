@@ -14,8 +14,5 @@ def str_value_oversized_error(field_type):
     message = (
         '`{}` value size must be {} bytes at most '
         '(accents usually occupy more than one byte)'
-    ).format(
-        type(field_type).__name__,
-        field_type._size
-    )
+    ).format(type(field_type).__name__, field_type._size)
     return ValueError(message)

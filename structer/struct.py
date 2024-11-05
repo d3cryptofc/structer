@@ -1,5 +1,5 @@
 from types import MappingProxyType
-from typing import ClassVar, Sequence, NoReturn
+from typing import ClassVar, NoReturn, Sequence
 
 from . import errors
 from .field import Field
@@ -68,7 +68,10 @@ class Struct:
             else:
                 field_value = field.type.decode(b'\0')
 
-            self.__struct_offsets__[field.name] = start_range, start_range + field.type.size
+            self.__struct_offsets__[field.name] = (
+                start_range,
+                start_range + field.type.size,
+            )
             self.__setattr__(field.name, field_value)
             setattr(
                 self, '__struct_size__', self.__struct_size__ + field.type.size
@@ -76,8 +79,11 @@ class Struct:
 
             start_range += field.type.size
 
-        setattr(self, '__struct_offsets__', MappingProxyType(self.__struct_offsets__))
-
+        setattr(
+            self,
+            '__struct_offsets__',
+            MappingProxyType(self.__struct_offsets__),
+        )
 
     def __len__(self):
         return self.__struct_size__
