@@ -17,6 +17,18 @@ taskipy = "^1.14.0"
 ruff = "^0.7.2"
 pytest-cov = "^6.0.0"
 
+[tool.ruff]
+line-length = 79
+indent-width = 4
+
+[tool.ruff.lint]
+select = ["F", "W", "E", "I"]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [build-system]
 requires = ["poetry-core"]
