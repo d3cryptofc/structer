@@ -3,7 +3,7 @@ name = "structer"
 version = "0.1.0"
 description = "Structer is a structurer written in Python based on C language structs."
 authors = ["Lelzin λ <d3cryptofc@gmail.com>"]
-lincense = "MIT"
+license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
