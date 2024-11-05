@@ -12,6 +12,10 @@ class FieldType:
             raise ValueError('`size` parameter must be greather than zero')
         self._size = size
 
+    @property
+    def size(self):
+        return self._size
+
     def __repr__(self):
         return '{}({!r})'.format(type(self).__name__, self._size)
 

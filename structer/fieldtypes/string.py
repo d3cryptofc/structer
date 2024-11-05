@@ -9,10 +9,6 @@ class String(FieldTypeABC, FieldType):
         super().__init__(size)
         self._size = size
 
-    @property
-    def size(self):
-        return self._size
-
     def _validate_encode(self, text: str) -> None:
         if not isinstance(text, str):
             raise TypeError('`text` parameter must be a string')
