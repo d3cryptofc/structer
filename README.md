@@ -10,6 +10,18 @@
   <a href="https://github.com/d3cryptofc/structer/LICENSE"><img src="https://img.shields.io/badge/MIT-282C34?style=flat-square&label=License&labelColor=1D1D1D"></a>
 </p>
 
+### 📌 Summary
+
+- [Installation](#%EF%B8%8F-installation)
+- [Getting Started](#%EF%B8%8F-getting-started)
+  - [Creating your first struct model](#1-creating-your-first-struct-model)
+  - [Instance generation and data storage](#2-instance-generation-and-data-storage)
+  - [Representation and size](#3-representation-and-size)
+  - [Getting the serialized data](#4-getting-the-serialized-data)
+- [Frequently Asked Questions (FAQ)](#-frequently-asked-questions-faq)
+  - [What are structs?](#1-what-are-structs)
+  - [Why use structs in Python?](#2-why-use-structs-in-python)
+
 ### 🛠️ Installation
 
 Installation from PyPI:
