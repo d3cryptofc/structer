@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "structer"
-version = "0.1.0"
+version = "0.1.1"
 description = "Structer is a structurer written in Python based on C language structs."
 authors = ["Lelzin λ <d3cryptofc@gmail.com>"]
 license = "MIT"
