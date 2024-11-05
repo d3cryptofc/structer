@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "structer"
+version = "0.1.0"
+description = "Structer is a structurer written in Python based on C language structs."
+authors = ["Lelzin λ <d3cryptofc@gmail.com>"]
+lincense = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
