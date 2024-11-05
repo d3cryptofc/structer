@@ -35,7 +35,8 @@ line-length = 79
 indent-width = 4
 
 [tool.ruff.lint]
-select = ["F", "W", "E", "I"]
+select = ["F", "W", "E", "I", "RET", "R", "ANN"]
+ignore = ["ANN101", "ANN102"]
 
 [tool.ruff.format]
 quote-style = "single"
