@@ -10,6 +10,17 @@
   <a href="https://github.com/d3cryptofc/structer/LICENSE"><img src="https://img.shields.io/badge/MIT-282C34?style=flat-square&label=License&labelColor=1D1D1D"></a>
 </p>
 
+### 🛠️ Installation
+
+Installation from PyPI:
+```
+pip3 install structer
+```
+
+Installation from GitHub:
+```
+pip3 install git+https://github.com/d3cryptofc/structer.git
+```
 
 ### 💬 Frequently Asked Questions (FAQ)
 #### 1. What are structs?
