@@ -46,3 +46,16 @@ For example, in `age` of the example above, `'23'` was inserted as a string, whi
 Or better yet, imagine that you want to store the number `18,000,000,000,000,000,000` (18 quintillion) in memory, however storing it in a text file as a string would consume 20 bytes, whereas 8 bytes would be enough to represent the number.
 
 The waste of these 12 bytes would represent twice the number itself, so much so that on a large scale this would throw a huge amount of storage space into the trash, around 60% of the space could be saved, that would be going from 1 TB to just 400G.
+
+#### 2. Why use structs in Python?
+
+Structs are like models for mapping memory space and organizing data, and, unlike C (because it is compiled), in Python each instance that is created will consume space in RAM, just like any other Python class instance.
+
+The point is not to use structs thinking that it will be a lighter alternative to a dataclass as much as a real struct (I don't perform miracles), the point is precisely in the memory mapping made by the struct, it will organize all the data in binary, and from there how you defined it to be organized, so that you can access it whenever you want, whether for:
+
+1. Saving file space.
+2. Bandwidth savings in data transmission.
+3. Deserialize data from real structs of a network protocol.
+4. Creation of binary layouts in general, even from a PNG file.
+
+Or for any other case where it is also useful.
