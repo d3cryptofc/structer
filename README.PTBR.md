@@ -146,7 +146,7 @@ Por exemplo, em `idade` do exemplo acima foi inserido `'23'` como string, o que 
 
 Ou melhor, imagine que você queira armazenar o número `18,000,000,000,000,000,000` (18 quintilhões) na memória, no entanto armazenar num arquivo de texto como uma string iria consumir 20 bytes, sendo que bastaria 8 bytes para representar o número.
 
-O desperdício desses 12 bytes daria pra representar o próprio número duas vezes, tanto que isso em larga escola jogaria um enorme espaço de armazenamento no lixo, cerca de 60% de espaço poderia ser economizado, isso seria ir de 1TB para somente 400G.
+O desperdício desses 12 bytes daria pra representar o próprio número duas vezes, tanto que isso em larga escala jogaria um enorme espaço de armazenamento no lixo, cerca de 60% de espaço poderia ser economizado, isso seria ir de 1TB para somente 400G.
 
 #### 2. Por que usar structs em Python?
 
