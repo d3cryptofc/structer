@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://pypi.org/project/structer"><img src="https://img.shields.io/badge/v0.1.0-282C34?style=flat-square&label=Version&labelColor=1D1D1D"></a>
-  <a href="https://github.com/d3cryptofc/structer/actions/workflows/ci.yml"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/d3cryptofc/structer/ci.yml?style=flat-square&labelColor=1D1D1D&label=Python 3.12&logo=python&logoColor=white"></a>
+  <a href="https://github.com/d3cryptofc/structer/actions/workflows/ci.yml"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/d3cryptofc/structer/ci.yml?style=flat-square&labelColor=1D1D1D&label=Python 3.9 | 3.10 | 3.11 | 3.12&logo=python&logoColor=white"></a>
   <a href="https://github.com/d3cryptofc/structer/LICENSE"><img src="https://img.shields.io/badge/MIT-282C34?style=flat-square&label=License&labelColor=1D1D1D"></a>
 </p>
 
