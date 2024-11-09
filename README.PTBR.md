@@ -1,6 +1,6 @@
 <br><br>
 <p align="center">
-  <img src="https://svgshare.com/i/1CDo.svg" width="500">
+  <img src="https://gist.githubusercontent.com/d3cryptofc/b137c0ecee656b142ec5265e2b4ec7bc/raw/3db96a47061d61b9db1d8e5b3e59723e328bf753/structer.svg" width="500">
   <br>
   Crie structs similares de C em python de forma intutiva!
 </p>
