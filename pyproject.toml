@@ -1,24 +1,25 @@
-[tool.poetry]
+[project]
 name = "structer"
 version = "0.2.0"
 description = "Structer is a structurer written in Python based on C language structs."
-authors = ["Lelzin λ <d3cryptofc@gmail.com>"]
-license = "MIT"
+authors = [{name = "Lelzin λ", email = "d3cryptofc@gmail.com"}]
+license = {file = "LICENSE"}
 readme = "README.md"
+dependencies = []
+requires-python = ">=3.9"
 
-[tool.poetry.urls]
+[project.urls]
 Repository = "https://github.com/d3cryptofc/structer"
 
-[tool.poetry.dependencies]
-python = "^3.9"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.3.3"
-pytest-sugar = "^1.0.0"
-mypy = "^1.13.0"
-taskipy = "^1.14.0"
-ruff = "^0.7.2"
-pytest-cov = "^6.0.0"
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "pytest-sugar>=1.0.0",
+    "mypy>=1.13.0",
+    "taskipy>=1.14.0",
+    "ruff>=0.7.2",
+    "pytest-cov>=6.0.0",
+]
 
 [tool.taskipy.tasks]
 test = "pytest -v"
@@ -43,7 +44,3 @@ quote-style = "single"
 indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
