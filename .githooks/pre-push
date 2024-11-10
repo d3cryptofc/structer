@@ -1,0 +1,11 @@
+if [ "$(git branch --show-current)" = "$(git config init.defaultbranch)" ]; then
+    echo -n 'ATTENTION! Are you sure about pushing to default branch? It can be a mistake! [Y\n] '
+    read confirm
+    if [ "$confirm" != "Y" ]; then
+        echo "Push aborted.";
+        exit 1
+    fi
+fi
+
+uv run task lint
+uv run task test
