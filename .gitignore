@@ -1,10 +1,8 @@
 .venv
-poetry.lock
+*.lock
 __pycache__
 .python-version
 .coverage
 htmlcov
-.mypy_cache
-.ruff_cache
-.pytest_cache
+{,.}*cache
 dist
