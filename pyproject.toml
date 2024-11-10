@@ -1,6 +1,6 @@
 [project]
 name = "structer"
-version = "0.2.0"
+version = "0.3.0"
 description = "Structer is a structurer written in Python based on C language structs."
 authors = [{name = "Lelzin λ", email = "d3cryptofc@gmail.com"}]
 license = {file = "LICENSE"}
