@@ -7,8 +7,10 @@
 
 <p align="center">
   <a href="https://pypi.org/project/structer"><img src="https://img.shields.io/badge/v0.2.0-282C34?style=flat-square&label=Version&labelColor=1D1D1D"></a>
-  <a href="https://github.com/d3cryptofc/structer/actions/workflows/ci.yml"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/d3cryptofc/structer/ci.yml?style=flat-square&labelColor=1D1D1D&label=Python 3.9 | 3.10 | 3.11 | 3.12&logo=python&logoColor=white"></a>
+  <a href="https://github.com/d3cryptofc/structer/blob/main/CONTRIBUTING.md"><img src="https://img.shields.io/badge/CONTRIBUTING-282C34?style=flat-square&logo=git&logoColor=FBFBFB"></a>
+  <a href="https://github.com/d3cryptofc/structer/blob/main/CODE_OF_CONDUCT.md"><img src="https://img.shields.io/badge/CODE OF CONDUCT-282C34?style=flat-square&logo=contributorcovenant&logoColor=FBFBFB"></a>
   <a href="https://github.com/d3cryptofc/structer/LICENSE"><img src="https://img.shields.io/badge/MIT-282C34?style=flat-square&label=License&labelColor=1D1D1D"></a>
+    <a href="https://github.com/d3cryptofc/structer/actions/workflows/ci.yml"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/d3cryptofc/structer/ci.yml?style=flat-square&labelColor=1D1D1D&label=Python 3.9 | 3.10 | 3.11 | 3.12&logo=python&logoColor=white&color=282C34"></a>
 </p>
 
 ### 📌 Summary
